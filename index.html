@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Changed 'tr' to 'en' for English language -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+        <div class="header-actions">
+            <!-- Dropdown for course selection -->
+            <select id="courseDropdown">
+                <option value="">Select Course</option>
+            </select>
+            <!-- Input field for searching students -->
+            <input type="text" id="searchStudent" placeholder="Search by Name or ID" />
+            <!-- Search button -->
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+    <main>
+        <!-- Add Course Section -->
+        <section>
+            <h2>Add Course</h2>
+            <form id="addCourseForm">
+                <input type="number" id="courseID" placeholder="Course ID" required>
+                <input type="text" id="courseName" placeholder="Course Name" required>
+                <select id="gradingScale">
+                    <option value="10">10-Point Scale</option>
+                    <option value="7">7-Point Scale</option>
+                </select>                               
+                <button type="submit">Add Course</button>
+            </form>
+        </section>
+
+        <!-- Add Student Section -->
+        <section>
+            <h2 id="courseTitle">Select a Course to Add Students</h2>
+            <form id="addStudentForm" style="display: none;">
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <input type="text" id="studentSurname" placeholder="Student Surname" required>
+                <input type="number" id="studentId" placeholder="Student ID" required>
+                <input type="number" id="midtermScore" placeholder="Midterm Score" required>
+                <input type="number" id="finalScore" placeholder="Final Score" required>
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+        
+        <!-- Course List Section -->
+        <section>
+            <h2>Course List</h2>
+            <table id="courseTable">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Course ID</th>
+                        <th>Grading Scale</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="courseList">
+                    <!-- Courses will be listed here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Student List Section -->
+        <section>
+            <h2>Student List</h2>
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th class="studentName">Student Name</th>
+                        <th class="studentId">Student ID</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                        <th>GAP</th>
+                        <th>Letter Grade</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Course Stats Section -->
+        <section>
+            <h3>Course Stats</h3>
+            <table id="courseStatsTable">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Passed Students</th>
+                        <th>Failed Students</th>
+                        <th>Average Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Course statistics will be populated here -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Search Results Section -->
+        <div id="searchResults"></div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

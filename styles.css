@@ -1,0 +1,170 @@
+/* General Settings */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #3E8E41;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+header .header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header select, header input, header button {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+header select:focus, header input:focus, header button:focus {
+    border-color: #4CAF50;
+}
+
+/* Buttons */
+header button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #45a049;
+}
+
+/* Main Content */
+main {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Section Styling */
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section Hover Effect */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Form Styling */
+form input, form select, form button {
+    margin: 15px 0;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Form Button Styling */
+form button {
+    background-color: #3E8E41;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    background-color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Main content adjustments for smaller screens */
+    main {
+        width: 95%;
+    }
+
+    /* Header adjustments for smaller screens */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+    }
+
+    /* Form input and button adjustments for smaller screens */
+    form input, form select, form button {
+        padding: 12px;
+    }
+
+    /* Table adjustments for smaller screens */
+    table th, table td {
+        font-size: 14px;
+    }
+}
